@@ -1,0 +1,50 @@
+body{
+    background-image: url(https://images.theconversation.com/files/353283/original/file-20200817-20-13d9l3.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop);
+    background-color: #003049;
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+
+    .txt-yellow{
+        color: #FCBF49;
+    }
+    
+    .txt-blue{
+        color: #003049;
+    }
+    
+    .txt-orange{
+        color: #F77F00;
+    }
+    
+    .txt-red{
+        color: #D62828;
+    }
+    
+    .txt-lemon{
+        color: #EAE2B7;
+    }
+    
+    .bg-yellow{
+        background-color: #FCBF49;
+    }
+    
+    .bg-blue{
+        background-color: #003049;
+    }
+    
+    .bg-orange{
+        background-color: #F77F00;
+    }
+    
+    .bg-red{
+        background-color: #D62828;
+    }
+    
+    .bg-lemon{
+        background-color: #EAE2B7;
+    }
+    
+    button:hover{
+        background-color: #D62828;
+    }
