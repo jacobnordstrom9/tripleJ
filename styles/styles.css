@@ -1,6 +1,5 @@
 body{
-    background-image: url(https://images.theconversation.com/files/353283/original/file-20200817-20-13d9l3.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop);
-    background-color: #003049;
+    background-color:rgb(50, 233, 215);
     background-size: cover;
     background-repeat: no-repeat;
     }
@@ -43,6 +42,10 @@ body{
     
     .bg-lemon{
         background-color: #EAE2B7;
+    }
+
+    .bg-ltblue{
+        color: #0466c8;
     }
     
     button:hover{
