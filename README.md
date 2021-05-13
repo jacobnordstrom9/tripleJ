@@ -5,10 +5,10 @@
     <img src="images/finding_streamo.png" alt="Logo" width="384px" height="216">
   </a>
 
-  <h2 align="center"> finding streamo </span></h2>
+  <!-- <h2 align="center"> finding streamo </span></h2> -->
 
   <p align="center">
-    Tierd of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
+    Tired of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
     <br />
     <br />
     <a href="## link to website ##">View Live</a>
