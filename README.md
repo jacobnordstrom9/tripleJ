@@ -1,11 +1,3 @@
-
-<h1> Triple J and A </h1>
-
-
-<h2> ### App Name ### </h2>
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -13,12 +5,10 @@
     <img src="images/moviePoster.jpeg" alt="Logo" width="384px" height="216">
   </a>
 
-  <h3 align="center"> ### App Name ### </h3>
+  <h3 align="center"> <<span style="color: #F77F00">finding </span><span style="color: #FCBF49">streamo</span></h3>
 
   <p align="center">
     Tierd of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="## link to website ##">View Live</a>
@@ -33,14 +23,11 @@
 * [The Team](#the-team)
 * [About the Project](#about-the-project)   
   * [Built With](#built-with)               
-<!-- * [Getting Started](#getting-started) -->
-  <!-- * [Prerequisites](#prerequisites) -->
-  <!-- * [Installation](#installation) -->
-<!-- * [Usage](#usage) -->
-<!-- * [Roadmap](#roadmap) -->
-<!-- * [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements) -->
+* [MVP](#mvp)
+* [Stretch Goals](#stretch-goals)
+* [Challenges and Solutions](#challenges-and-solutions)
+* [Code Snippets](#code-snippets)
+* [Screenshots](#screenshots)
 
 
 ## The Team
