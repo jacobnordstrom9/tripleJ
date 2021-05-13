@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="## // link to website // ##">
-    <img src="images/moviePoster.jpeg" alt="Logo" width="384px" height="216">
+    <img src="images/finding_streamo.png" alt="Logo" width="384px" height="216">
   </a>
 
   <h2 align="center"> finding streamo </span></h2>
@@ -96,6 +96,6 @@ placeholder placeholder placeholder
 
 ## Screenshots
 
-<img src="images/moviePoster.jpeg" alt="Logo" width="384px" height="216">
+<img src="images/finding_streamo.png" alt="Logo" width="384px" height="216">
 
 
