@@ -5,7 +5,7 @@
     <img src="images/moviePoster.jpeg" alt="Logo" width="384px" height="216">
   </a>
 
-  <h3 align="center"> <<span style="color: #F77F00">finding </span><span style="color: #FCBF49">streamo</span></h3>
+  <h2 align="center"> finding streamo </span></h2>
 
   <p align="center">
     Tierd of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
@@ -23,7 +23,7 @@
 * [The Team](#the-team)
 * [About the Project](#about-the-project)   
   * [Built With](#built-with)               
-* [MVP](#mvp)
+* [MVP (Minimum Viable Product)](#mvp-minimum-viable-product)
 * [Stretch Goals](#stretch-goals)
 * [Challenges and Solutions](#challenges-and-solutions)
 * [Code Snippets](#code-snippets)
