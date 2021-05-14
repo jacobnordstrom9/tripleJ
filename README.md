@@ -46,7 +46,7 @@ Primary team role: xxx xxx xx xxx x
 
 <strong> Jacob Nordstrom: https://github.com/jacobnordstrom9 </strong>
 
-Primary team role: xxx xxx xxx xxx
+Primary team role: Searchbar javascript, README
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
