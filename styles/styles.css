@@ -1,7 +1,20 @@
 body{
     background-color:rgb(50, 233, 215);
-    background-size: cover;
-    background-repeat: no-repeat;
+    }
+
+img{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+    }
+
+.txt-turq{
+    color:rgb(133, 231, 221);
+    }
+
+.txt-ltblue{
+    color: #0466c8;
     }
 
     .txt-yellow{
@@ -51,3 +64,4 @@ body{
     button:hover{
         background-color: #D62828;
     }
+    
