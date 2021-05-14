@@ -51,7 +51,7 @@ Primary team role: xxx xxx xxx xxx
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-We have created a website that will allow the user to easily search for their favorite movies and quickly see on what streaming service the movie is available. The front page displays the current top 20 movies available, with a description of each movie. If a movie is also being played in theaters, the user will be able to search for movie times in their area.
+We have created a website that will allow the user to easily search for their favorite movies and quickly see on what streaming service the movie is available. The front page displays the current top 20 movies, with a description/photo/streaming service its available on of each movie. A button which will bring you to a top 10 movie of a specific genre. A useable search bar to search for a specific movie. If a movie is also being played in theaters, the user will be able to search for movie times in their area.
 
 ### Built With
 
@@ -76,6 +76,7 @@ We have created a website that will allow the user to easily search for their fa
 
 * A randomization function allowing users to find random movies based on a selected genre. 
 * Being able to purchase tickets for in-theater movies. 
+* Link to the streaming service if you want to watch it. 
 
 ## Challenges and Solutions: 
 
