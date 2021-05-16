@@ -217,15 +217,13 @@ function onMediaHover() {
 
 
 
-/*
-==================================================================
-    MAIN NAVIGATION 
-==================================================================
-*/
+
+    // MAIN NAVIGATION
 
 
-// ARGUMENT WILL BE RECIVEDAS A STRING CONTAINING ..
-// .. THE CATEGORY AND SUB-CATEGORY
+
+// ARGUMENT WILL BE RECIVEDAS A STRING CONTAINING 
+// THE CATEGORY AND SUB-CATEGORY
 function nav(param) {
     let nav = param.split(',');
     let primary = nav[0];
@@ -258,11 +256,9 @@ function nav(param) {
 };
 
 
-/*
-==============================
-    MANAGE SECONDARY NAV
-==============================
-*/
+
+    // MANAGE SECONDARY NAV
+
 
 // WILL CREATE A SECOND MENU BASED ON ARRAY IN LOCAL STATE
 function manageSecondaryNav(primary, secondary) {
@@ -289,14 +285,12 @@ function manageSecondaryNav(primary, secondary) {
 
 
 
-/*
-==============================
-    MANAGE ACTIVE CLASS
-==============================
-*/
 
-// ITERATE OVER BOTH MENUS AND APPLY AN ACTIVE CLASS TO .. 
-// .. LINKED PARENT AND CHILD ITEMS
+    // MANAGE ACTIVE CLASS
+
+
+// ITERATE OVER BOTH MENUS AND APPLY AN ACTIVE CLASS TO  
+// LINKED PARENT AND CHILD ITEMS
 function manageActiveClass(primary, secondary) {
 
     let activeParent = document.querySelectorAll('.nav-parent');
@@ -318,11 +312,9 @@ function manageActiveClass(primary, secondary) {
 };
 
 
-/*
-==================================================================
-    SEARCH INPUT FUNCTION
-==================================================================
-*/
+
+    // SEARCH INPUT FUNCTION
+
 
 function getSearchInput() {
 
@@ -357,17 +349,14 @@ function getSearchInput() {
 
 
 
-/*
-==================================================================
-    LOCAL STORAGE FUNCTIONS
-==================================================================
-*/
 
-/*
-==============================
-    PARSE LOCAL STORAGE LISTS
-==============================
-*/
+    // LOCAL STORAGE FUNCTIONS
+
+
+
+    // PARSE LOCAL STORAGE LISTS
+
+
 
 // IF LISTS EXIST, PARSE & STORE IN LOCAL STATE
 function parseLocalStorageLists() {
@@ -385,14 +374,12 @@ function parseLocalStorageLists() {
 
 
 
-/*
-==============================
-    CHECK IF MEDIA ITEM IN LIST
-==============================
-*/
 
-// SMALL FUNCTION TO QUICKLY CHECK IF TMDB ID EXISTS...
-// ...IN A LIST. RETURNS A BOOLEAN 
+    // CHECK IF MEDIA ITEM IN LIST
+
+
+// SMALL FUNCTION TO QUICKLY CHECK IF TMDB ID EXISTS
+// IN A LIST. RETURNS A BOOLEAN 
 function checkIfInCollection(tmdbId) {
 
     // CHECK THAT EXISTING LISTS HAVE ENTRIES
@@ -413,17 +400,11 @@ function checkIfInCollection(tmdbId) {
 
 
 
-/*
-==================================================================
-    CRUD FUNCTIONS / CREATE / UPDATE / DELETE
-==================================================================
-*/
 
-/*
-==============================
-    UPDATE LIST 
-==============================
-*/
+
+
+    // UPDATE LIST 
+
 
 function updateList(tmdbId, id) {
 
@@ -509,11 +490,9 @@ function updateList(tmdbId, id) {
 
 
 
-/*
-==============================
-    ADD NEW LIST
-==============================
-*/
+
+    // ADD NEW LIST
+
 
 // PASS IN DIV ID, AND INPUT ID TO SELECT BOTH
 function addNewList(divId, inputId) {
@@ -535,11 +514,9 @@ function addNewList(divId, inputId) {
 
 
 
-/*
-==============================
-    ADD ITEM TO LIST 
-==============================
-*/
+
+    // ADD ITEM TO LIST 
+
 
 // IN FULL MEDIA SCREEN
 // PUSH TO LOCAL STATE, SET LOCAL STORAGE, UPDATE LISTS
@@ -553,11 +530,9 @@ function addItemToList(list, tmdbId, id) {
 
 
 
-/*
-==============================
-    DELETE A LIST
-==============================
-*/
+
+    // DELETE A LIST
+
 
 function deleteList(list, id) {
 
@@ -586,11 +561,9 @@ function deleteList(list, id) {
 
 
 
-/*
-==============================
-    DELETE LIST ITEM
-==============================
-*/
+
+    // DELETE LIST ITEM
+
 
 function deleteItemFromList(list, tmdbId, id, remove) {
 
@@ -624,11 +597,9 @@ function deleteItemFromList(list, tmdbId, id, remove) {
 
 
 
-/*
-==================================================================
-    SHOW MAIN CONTENT RESULTS
-==================================================================
-*/
+
+    // SHOW MAIN CONTENT RESULTS
+
 
 function showContentResults(results) {
 
@@ -641,7 +612,6 @@ function showContentResults(results) {
 
     // MAP OVER DATA
     results.map(result => {
-
         // EXTRACT RESULTS
         const tmdbId = result.id;
         const title = result.title || result.name || 'Unknown';
@@ -694,13 +664,13 @@ function showContentResults(results) {
 
 
 
-/*
-==================================================================
-    SHOW FULL MEDIA CONTENT 
-==================================================================
-*/
+
+    // SHOW FULL MEDIA CONTENT 
+
 
 function showFullMediaContent(result) {
+    console.log(result)
+
 
     // EXTRACT RESULTS & SET BACKUP IF FAILURE
     const tmdbId = result.id || '0';
@@ -713,12 +683,30 @@ function showFullMediaContent(result) {
     let backdrop = `${BACKDROP}${result.backdrop_path}`;
     let poster = `${POSTER}${result.poster_path}`;
     let trailer = [];
+    // let streamPlaceHolder = './images/vudu.png'
+    // var linktext = result['watch/providers'].results.US.flatrate.provider_name;
+    // var streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
+    switch (result['watch/providers']) {
+
+        case  result['watch/providers'] :
+        var linktext = result['watch/providers'].results.US.flatrate[0].provider_name;
+        var streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
+        var streamService = result.homepage;
+            break;
+        case result['watch/providers']:
+            var linktext = title;
+            var streamLink = 'images/vudu.png'
+            var streamService = 'https://www.vudu.com'
+        default:
+            break;
+    }
 
     // CHANGE DATE TO EUROPEAN FORMAT 
     // IF ARTWORK FAILS, SET THE DEFAULT ARTWORK
     if (date) date = date.split('-').reverse().join('-');
     if (result.backdrop_path == null) backdrop = DEFAULT_BACKDROP;
     if (result.poster_path == null) poster = DEFAULT_POSTER;
+    
 
     // GET TRAILER & GET FOR UNDEFINED
     // RETURN NEW ARRAY AND FILTER BASED ON VIDEO TYPE
@@ -747,10 +735,13 @@ function showFullMediaContent(result) {
 
         <!-- MEDIA BACKDROP -->
         <div id="media-showcase" style="background-image: url('${backdrop}')">
-            <a class="download-fanart" href="${backdrop}"target="_blank">DOWNLOAD FANART<br />
+            <a class="download-fanart" href="${backdrop}"target="_blank">DOWNLOAD WALLPAPER<br/>
                 <i class="material-icons download-icon">cloud_download</i>
             </a>
             <h1 id="media-title">${title}</h1>
+            <a href="${streamService}" class="streamService" target="_blank">
+            <img width="8%" id="streamer" src="${streamLink}" alt="${linktext}">
+            </a>
         </div>
 
         <!-- MEDIA DETAILS -->
@@ -779,11 +770,9 @@ function showFullMediaContent(result) {
 
 
 
-/*
-==================================================================
-    SHOW SEARCH RESULTS
-==================================================================
-*/
+
+    // SHOW SEARCH RESULTS
+
 
 function showSearchResults(results) {
 
@@ -817,11 +806,9 @@ function showSearchResults(results) {
 
 
 
-/*
-==================================================================
-    SHOW USER LISTS
-==================================================================
-*/
+
+    // SHOW USER LISTS
+
 
 function showMyLists() {
 
@@ -926,11 +913,9 @@ function sampleLists() {
 
 
 
-/*
-==============================
-    PAGINATION 
-==============================
-*/
+
+    // PAGINATION 
+
 
 // REVISITED A FEW TIMES
 // FOUND BETTER STRATEGY RELATING TO A GOOGLE STYLE PAGINATION METHOD
@@ -999,11 +984,9 @@ function pagination(primary, secondary, totalPages, page) {
 
 
 
-/*
-==============================
-    UDATE POSTER ICON
-==============================
-*/
+
+    // UDATE POSTER ICON
+
 
 // AFTER ADDING / REMOVING FROM A LIST - UPDATE POSTER ICON STATUS
 function checkIfCollectionChanged(tmdbId) {
@@ -1031,14 +1014,10 @@ function checkIfCollectionChanged(tmdbId) {
 
 
 
-/*
-==================================================================
-    TMDB / API ROUTES
-==================================================================
-*/
+    // TMDB / API ROUTES
+
 
 // TMDB URLS
-const API_KEY = '?api_key=d41fd9978486321b466e29bfec203902';
 const MOVIES = 'https://api.themoviedb.org/3/movie/';
 const TVSHOWS = 'https://api.themoviedb.org/3/tv/';
 const SEARCH = 'https://api.themoviedb.org/3/search/multi';
@@ -1052,11 +1031,9 @@ let data;
 
 
 
-/*
-==============================
-    FETCH MAIN TMDB CONTENT
-==============================
-*/
+
+    // FETCH MAIN TMDB CONTENT
+
 
 function fetchTMDbData(primary, secondary, page = 1) {
 
@@ -1084,11 +1061,9 @@ function fetchTMDbData(primary, secondary, page = 1) {
 
 
 
-/*
-================================
-    FETCH FULL MEDIA CONTENT
-================================
-*/
+
+    // FETCH FULL MEDIA CONTENT
+
 
 function fetchMediaData(mediaType, tmdbId) {
 
@@ -1097,7 +1072,7 @@ function fetchMediaData(mediaType, tmdbId) {
     else url = TVSHOWS;
 
     // MAKE REQUEST WITH HEADERS
-    fetch(`${url}${tmdbId}${API_KEY}${LANGUAGE}&append_to_response=videos`,
+    fetch(`${url}${tmdbId}${API_KEY}${LANGUAGE}&append_to_response=watch/providers,videos`,
         {
             headers: new Headers({ 'Accept': 'application/json' })
         })
@@ -1115,11 +1090,9 @@ function fetchMediaData(mediaType, tmdbId) {
 
 
 
-/*
-==============================
-    FETCH SEARCH CONTENT
-==============================
-*/
+
+    // FETCH SEARCH CONTENT
+
 
 function getTMDbSearchData(searchQuery) {
 
@@ -1144,11 +1117,9 @@ function getTMDbSearchData(searchQuery) {
 
 
 
-/*
-==================================================================
-    SAMPLE LIST DATA
-==================================================================
-*/
+
+    // SAMPLE LIST DATA
+
 
 const mylists = {
     movies: [
@@ -1570,11 +1541,9 @@ const mylists = {
 // USE AS SAMPLE LISTS WHEN ALL LIST DELETED
 let sampleData = JSON.stringify(mylists);
 
-/*
-==================================================================
-    INIT APPLICATION / START FUNCTIONS
-==================================================================
-*/
+
+    // INIT APPLICATION / START FUNCTIONS
+
 
 // PARSE ANY LOCAL STORAGE LISTS INTO LOCAL STATE
 // SET ANY GLOBAL EVENT LISTENERS
