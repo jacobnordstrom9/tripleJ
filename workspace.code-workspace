@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Week-6/Friday"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "groupProject"
+	}
+}
