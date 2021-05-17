@@ -6,7 +6,11 @@
   src: url(https://fonts.gstatic.com/s/materialicons/v41/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
     format("woff2");
 }
-
+#streamer{
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 .material-icons {
   font-family: "Material Icons";
   font-weight: normal;
@@ -56,8 +60,8 @@ header #topbar #ref-link {
 main #main-content .media-item .rating,
 main #main-pagination .pagination-box {
   font-family: "Oswald", sans-serif;
-  font-size: 14px;
-  padding: 5px 6px;
+  font-size: 12px;
+  padding: 5px 5px;
   border-radius: 50%;
   color: #f9f9f9;
   background-color: #0cac03;
