@@ -683,23 +683,22 @@ function showFullMediaContent(result) {
     let backdrop = `${BACKDROP}${result.backdrop_path}`;
     let poster = `${POSTER}${result.poster_path}`;
     let trailer = [];
-    // let streamPlaceHolder = './images/vudu.png'
-    // var linktext = result['watch/providers'].results.US.flatrate.provider_name;
-    // var streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
-    switch (result['watch/providers']) {
+    let linktext = '';
+    let streamLink = '';
+    let streamService = '';
+    let runTime = result.runtime + ' Minutes';
 
-        case  result['watch/providers'] :
-        var linktext = result['watch/providers'].results.US.flatrate[0].provider_name;
-        var streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
-        var streamService = result.homepage;
-            break;
-        case result['watch/providers']:
-            var linktext = title;
-            var streamLink = 'images/vudu.png'
-            var streamService = 'https://www.vudu.com'
-        default:
-            break;
+
+    try {
+        linktext = result['watch/providers'].results.US.flatrate[0].provider_name;
+        streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
+        streamService = result.homepage; 
+    } catch (error) {
+        linktext = title;
+        streamLink = 'images/vudu.png'
+        streamService = 'https://www.vudu.com' 
     }
+
 
     // CHANGE DATE TO EUROPEAN FORMAT 
     // IF ARTWORK FAILS, SET THE DEFAULT ARTWORK
@@ -749,7 +748,7 @@ function showFullMediaContent(result) {
             <img width="140" id="media-poster" src="${poster}" alt="${title}">
             <div id="media-details-bar">
                 <a href="${trailer[0]}" target=_blank">Trailer</a>
-                <span>${rating}</span><span>${status}</span><span>${date}</span>
+                <span>${rating}</span><span>${status}</span><span>${date}</span><span>${runTime}</span>
                 <span class="from-collection" onclick="updateList(${tmdbId},'#from-full-media-collection')">Add/Remove from Collection</span>
 
                 <!-- ADD REMOVE ITEM FROM COLLECTION -->
