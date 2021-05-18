@@ -2,7 +2,7 @@
 
 // GLOBAL VARIABLES
 
-
+const body = document.querySelector('body');
 const menuBtn = document.querySelector('#menu-btn');
 const searchInput = document.querySelector('#search-input');
 const searchClear = document.querySelector('.search-clear');
