@@ -20,33 +20,14 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [The Team](#the-team)
 * [About the Project](#about-the-project)   
   * [Built With](#built-with)               
+* [The Team](#the-team)
 * [MVP (Minimum Viable Product)](#mvp-minimum-viable-product)
 * [Stretch Goals](#stretch-goals)
 * [Challenges and Solutions](#challenges-and-solutions)
 * [Code Snippets](#code-snippets)
 * [Screenshots](#screenshots)
-
-
-## The Team
-
-<strong> Jason Humphreys: https://github.com/SJasonHumphrey </strong>
-
-Primary team role: APIs, xxx xxx xxx xxx xxx
-
-<strong> Jim Chamberlin: https://github.com/jimcha924 </strong>
-
-Primary team role: CSS, xxx xxx xx xxx xxx
-
-<strong> Anjunique Sampson: https://github.com/sampsonnene </strong>
-
-Primary team role: xxx xxx xx xxx x
-
-<strong> Jacob Nordstrom: https://github.com/jacobnordstrom9 </strong>
-
-Primary team role: Searchbar javascript, README
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
@@ -65,25 +46,29 @@ We have created a website that will allow the user to easily search for their fa
 * [theMovieDB](https://themoviedb.org)
 * [Fandango](https://developer.fandango.com)
 
+## The Team
+
+<strong> Jason Humphreys: https://github.com/SJasonHumphrey </strong>
+<strong> Jim Chamberlin: https://github.com/jimcha924 </strong>
+<strong> Anjunique Sampson: https://github.com/sampsonnene </strong>
+<strong> Jacob Nordstrom: https://github.com/jacobnordstrom9 </strong>
 
 ## MVP (Minimum Viable Product):
 
 * Searchable database for different movies and the streaming service they are located on.
-* Clickable movie titles and display general information
-* If a movie is currently being played in theathers, theather location and movie times in your area is available. 
+* Clickable movie titles and display general information.
 
 ## Stretch Goals
 
-* A randomization function allowing users to find random movies based on a selected genre. 
-* Being able to purchase tickets for in-theater movies. 
 * Link to the streaming service if you want to watch it. 
+* Feature which allows you to save movies to your collection. 
 
 ## Challenges and Solutions: 
 
-<strong> Challenge: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
-<strong> Solution: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
+<strong> Challenge: </strong> The way the streaming services was nested inside data required a tedious amount of coding in order to extract the correct streaming service where the movie is located. 
+<strong> Solution: </strong> Using arrays and objects etc etc etc.
 
-<strong> Challenge: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
+<strong> Challenge: </strong> Dynamic creation and dynamic classes. Divs within divs within divs. 
 <strong> Solution: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
 
 <strong> Challenge: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
@@ -92,7 +77,89 @@ We have created a website that will allow the user to easily search for their fa
 ## Code Snippets
 
 ```sh
-placeholder placeholder placeholder
+function showFullMediaContent(result) {
+    console.log(result)
+
+
+    // EXTRACT RESULTS & SET BACKUP IF FAILURE
+    const tmdbId = result.id || '0';
+    const title = result.title || result.name || 'Unknown';
+    const tagline = result.tagline || `NO. SEASONS: ${result.number_of_seasons}  ~  NO. EPISODES: ${result.number_of_episodes}` || '';
+    const overview = result.overview || '';
+    const rating = result.vote_average || '0';
+    let date = result.release_date || result.first_air_date || '';
+    let status = result.status || '';
+    let backdrop = `${BACKDROP}${result.backdrop_path}`;
+    let poster = `${POSTER}${result.poster_path}`;
+    let trailer = [];
+    let linktext = '';
+    let streamLink = '';
+    let streamService = '';
+    let runTime = result.runtime + ' Minutes';
+
+
+    try {
+        linktext = result['watch/providers'].results.US.flatrate[0].provider_name;
+        streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
+        streamService = result.homepage; 
+    } catch (error) {
+        linktext = title;
+        streamLink = 'images/vudu.png'
+        streamService = 'https://www.vudu.com' 
+    }
+
+
+    // CHANGE DATE TO EUROPEAN FORMAT 
+    // IF ARTWORK FAILS, SET THE DEFAULT ARTWORK
+    if (date) date = date.split('-').reverse().join('-');
+    if (result.backdrop_path == null) backdrop = DEFAULT_BACKDROP;
+    if (result.poster_path == null) poster = DEFAULT_POSTER;
+    
+
+    // GET TRAILER & GET FOR UNDEFINED
+    // RETURN NEW ARRAY AND FILTER BASED ON VIDEO TYPE
+    if (result.videos.results.length != 0) {
+        trailer = result.videos.results.map(video => {
+            if (video.type == 'Trailer') {
+                return `https://www.youtube.com/watch?v=${video.key}`;
+            }
+        }).filter(video => {
+            if (video != 'undefined') {
+                return video;
+            }
+        });
+    }
+
+    // IF NO TRAILERS EXIST - REDIRECT TO YOUTUBE WITH QUERY
+    else {
+        trailer[0] = `https://www.youtube.com/results?search_query=${title}`;
+    }
+
+    // CREATE HTML TO RETURN
+    fullMediaContent.innerHTML = `
+        <p class="content-title">MEDIA DETAILS
+            <i class="material-icons close-media-content" onclick="resetFullMediaContent(); checkIfCollectionChanged(${tmdbId})">close</i>
+        </p>
+
+        <!-- MEDIA BACKDROP -->
+        <div id="media-showcase" style="background-image: url('${backdrop}')">
+            <a class="download-fanart" href="${backdrop}"target="_blank">DOWNLOAD WALLPAPER<br/>
+                <i class="material-icons download-icon">cloud_download</i>
+            </a>
+            <h1 id="media-title">${title}</h1>
+            <a href="${streamService}" class="streamService" target="_blank">
+            <img width="8%" id="streamer" src="${streamLink}" alt="${linktext}">
+            </a>
+        </div>
+
+        <!-- MEDIA DETAILS -->
+        <div id="media-details">
+            <img width="140" id="media-poster" src="${poster}" alt="${title}">
+            <div id="media-details-bar">
+                <a href="${trailer[0]}" target=_blank">Trailer</a>
+                <span>${rating}</span><span>${status}</span><span>${date}</span><span>${runTime}</span>
+                <span class="from-collection" onclick="updateList(${tmdbId},'#from-full-media-collection')">Add/Remove from Collection</span>
+
 ```
 
 ## Screenshots
