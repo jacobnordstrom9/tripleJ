@@ -48,10 +48,10 @@ We have created a website that will allow the user to easily search for their fa
 
 ## The Team
 
-<strong> Jason Humphreys: https://github.com/SJasonHumphrey </strong>
-<strong> Jim Chamberlin: https://github.com/jimcha924 </strong>
-<strong> Anjunique Sampson: https://github.com/sampsonnene </strong>
-<strong> Jacob Nordstrom: https://github.com/jacobnordstrom9 </strong>
+<strong> Jason Humphreys: https://github.com/SJasonHumphrey </strong> <br/>
+<strong> Jim Chamberlin: https://github.com/jimcha924 </strong> <br/>
+<strong> Anjunique Sampson: https://github.com/sampsonnene </strong> <br/>
+<strong> Jacob Nordstrom: https://github.com/jacobnordstrom9 </strong> <br/>
 
 ## MVP (Minimum Viable Product):
 
@@ -65,13 +65,13 @@ We have created a website that will allow the user to easily search for their fa
 
 ## Challenges and Solutions: 
 
-<strong> Challenge: </strong> The way the streaming services was nested inside data required a tedious amount of coding in order to extract the correct streaming service where the movie is located. 
+<strong> Challenge: </strong> The way the streaming services was nested inside data required a tedious amount of coding in order to extract the correct streaming service where the movie is located. <br/>
 <strong> Solution: </strong> Using arrays and objects etc etc etc.
 
-<strong> Challenge: </strong> Dynamic creation and dynamic classes. Divs within divs within divs. 
+<strong> Challenge: </strong> Dynamic creation and dynamic classes. Divs within divs within divs.  <br/>
 <strong> Solution: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
 
-<strong> Challenge: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
+<strong> Challenge: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf <br/>
 <strong> Solution: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
 
 ## Code Snippets
