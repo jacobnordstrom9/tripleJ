@@ -32,7 +32,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-We have created a website that will allow the user to easily search for their favorite movies and quickly see on what streaming service the movie is available. The front page displays the current top 20 movies, with a description/photo/streaming service its available on of each movie. A button which will bring you to a top 10 movie of a specific genre. A useable search bar to search for a specific movie. If a movie is also being played in theaters, the user will be able to search for movie times in their area.
+We have created a website that will allow the user to easily search for their favorite movies and quickly see what streaming service the movie is available on. The front page displays the current Top 20 movies, with a description/photo/streaming service its available on. A button which will bring you to a top 10 movie of a specific genre. A useable search bar to search for a specific movie. If a movie is also being played in theaters, the user will be able to search for movie times in their area.
 
 ### Built With
 
@@ -44,7 +44,6 @@ We have created a website that will allow the user to easily search for their fa
 <strong> APIs: </strong>
 
 * [theMovieDB](https://themoviedb.org)
-* [Fandango](https://developer.fandango.com)
 
 ## The Team
 
@@ -77,9 +76,11 @@ We have created a website that will allow the user to easily search for their fa
 ## Code Snippets
 
 ```sh
+
+** DYNAMIC USER INTERFACE CODE **
+
 function showFullMediaContent(result) {
     console.log(result)
-
 
     // EXTRACT RESULTS & SET BACKUP IF FAILURE
     const tmdbId = result.id || '0';
@@ -97,7 +98,6 @@ function showFullMediaContent(result) {
     let streamService = '';
     let runTime = result.runtime + ' Minutes';
 
-
     try {
         linktext = result['watch/providers'].results.US.flatrate[0].provider_name;
         streamLink = POSTER + result['watch/providers'].results.US.flatrate[0].logo_path;
@@ -107,7 +107,6 @@ function showFullMediaContent(result) {
         streamLink = 'images/vudu.png'
         streamService = 'https://www.vudu.com' 
     }
-
 
     // CHANGE DATE TO EUROPEAN FORMAT 
     // IF ARTWORK FAILS, SET THE DEFAULT ARTWORK
@@ -151,7 +150,6 @@ function showFullMediaContent(result) {
             <img width="8%" id="streamer" src="${streamLink}" alt="${linktext}">
             </a>
         </div>
-
         <!-- MEDIA DETAILS -->
         <div id="media-details">
             <img width="140" id="media-poster" src="${poster}" alt="${title}">
@@ -159,6 +157,8 @@ function showFullMediaContent(result) {
                 <a href="${trailer[0]}" target=_blank">Trailer</a>
                 <span>${rating}</span><span>${status}</span><span>${date}</span><span>${runTime}</span>
                 <span class="from-collection" onclick="updateList(${tmdbId},'#from-full-media-collection')">Add/Remove from Collection</span>
+
+
 
 ```
 
