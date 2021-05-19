@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="## // link to website // ##">
+  <a href="findingstreamo.netlify.app">
     <img src="images/FindingStreamo_wht_txt.png" alt="Logo" width="576px" height="238">
   </a>
 
@@ -11,7 +11,7 @@
     Tired of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
     <br />
     <br />
-    <a href="## link to website ##">View Live</a>
+    <a href="findingstreamo.netlify.app">View Live</a>
   </p>
 </p>
 
@@ -68,8 +68,8 @@ We have created a website that will allow the user to easily search for their fa
 <strong> Challenge: </strong> The way the streaming services was nested inside data required a tedious amount of coding in order to extract the correct streaming service where the movie is located. <br/>
 <strong> Solution: </strong> Jason worked diligently with a lot of console.logs in order to grab the necessary information out of the API. 
 
-<strong> Challenge: </strong> One of the challenges of having so many divs/CSS classes and enabling Dark mode towards the end is having to go back and add a dark/light mode capability to all of the CSS classes. <br/>
-<strong> Solution: </strong> Deciding early on if you want your website to incorporate Dark/Light mode and being sure you add it to each class you create as you are building up your CSS. 
+<strong> Challenge: </strong> One of the biggest issues we faced was when we decided to enable a Dark/Light mode feature to the website. With the amount of divs being used, it required extreme dilligence in order to edit everything with the Dark/Light mode capabilities. We ultimately ended up scrapping the idea as we were running out of time.<br/>
+<strong> Solution: </strong> We recommend deciding early on if you want your website to incorporate Dark/Light mode and being sure you add it to each class you create as you are building up your CSS. 
 
 <strong> Challenge: </strong> Dynamic creation and dynamic classes. Divs within divs within divs.  <br/>
 <strong> Solution: </strong> Doing most of the HTML within the JavaScript helped clean up the code overall. 
