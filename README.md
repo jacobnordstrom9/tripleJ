@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="findingstreamo.netlify.app">
+  <a>
     <img src="images/FindingStreamo_wht_txt.png" alt="Logo" width="576px" height="238">
   </a>
 
@@ -11,7 +11,7 @@
     Tired of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
     <br />
     <br />
-    <a href="findingstreamo.netlify.app">View Live</a>
+    <a> [Finding Streamo](findingstreamo.netlify.app)</a>
   </p>
 </p>
 
