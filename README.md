@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="## // link to website // ##">
-    <img src="images/FindingStreamo_wht_txt.png" alt="Logo" width="384px" height="216">
+    <img src="images/FindingStreamo_wht_txt.png" alt="Logo" width="576px" height="238">
   </a>
 
   <!-- <h2 align="center"> finding streamo </span></h2> -->
@@ -165,8 +165,8 @@ function showFullMediaContent(result) {
 
 ## Screenshots
 
-<img src="images/homepage.png" alt="homepage" width="384px" height="216">
-<img src="images/searchTVShow.png" alt="tvShows" width="384px" height="216">
-<img src="images/listExample.png" alt="list" width="384px" height="216">
+<img src="images/homepage.png" alt="homepage" width="768px" height="432">
+<img src="images/searchTVShow.png" alt="tvShows" width="768px" height="432">
+<img src="images/listExample.png" alt="list" width="768px" height="432">
 
 
