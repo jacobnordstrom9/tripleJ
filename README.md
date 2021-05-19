@@ -11,7 +11,7 @@
     Tired of spending hours trying to find your movie on the countless of streaming services out there? Look no further than right here!
     <br />
     <br />
-    <a href="https://findingstreamo.netlify.app" target="_blank">Website</a>
+    <a href="https://findingstreamo.netlify.app" target="_blank">Finding Streamo</a>
   </p>
 </p>
 
