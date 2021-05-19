@@ -1,5 +1,3 @@
-
-
 // GLOBAL VARIABLES
 
 
@@ -703,7 +701,6 @@ function showFullMediaContent(result) {
         <p class="content-title">MEDIA DETAILS
             <i class="material-icons close-media-content" onclick="resetFullMediaContent(); checkIfCollectionChanged(${tmdbId})">close</i>
         </p>
-
         <!-- MEDIA BACKDROP -->
         <div id="media-showcase" style="background-image: url('${backdrop}')">
             <a class="download-fanart" href="${backdrop}"target="_blank">DOWNLOAD WALLPAPER<br/>
@@ -714,7 +711,6 @@ function showFullMediaContent(result) {
             <img width="8%" id="streamer" src="${streamLink}" alt="${linktext}">
             </a>
         </div>
-
         <!-- MEDIA DETAILS -->
         <div id="media-details">
             <img width="140" id="media-poster" src="${poster}" alt="${title}">
@@ -722,7 +718,6 @@ function showFullMediaContent(result) {
                 <a href="${trailer[0]}" target=_blank">Trailer</a>
                 <span>${rating}</span><span>${status}</span><span>${date}</span><span>${runTime}</span>
                 <span class="from-collection" onclick="updateList(${tmdbId},'#from-full-media-collection')">Add/Remove from Collection</span>
-
                 <!-- ADD REMOVE ITEM FROM COLLECTION -->
                 <div id="from-full-media-collection"></div>
             </div>
