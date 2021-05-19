@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="## // link to website // ##">
-    <img src="images/finding_streamo.png" alt="Logo" width="384px" height="216">
+    <img src="images/FindingStreamo_wht_txt.png" alt="Logo" width="384px" height="216">
   </a>
 
   <!-- <h2 align="center"> finding streamo </span></h2> -->
@@ -32,7 +32,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-We have created a website that will allow the user to easily search for their favorite movies and quickly see what streaming service the movie is available on. The front page displays the current Top 20 movies, with a description/photo/streaming service its available on. A button which will bring you to a top 10 movie of a specific genre. A useable search bar to search for a specific movie. If a movie is also being played in theaters, the user will be able to search for movie times in their area.
+We have created a website that will allow the user to easily search for their favorite Movies/TV Shows and quickly see what streaming service your selection is available on. The front page shows the current Top 20 Movies/TV Shows, with a dynamic interface displaying general information and a clickable link to view your selection on its available streaming service. Want to save a list of movies to view later? Add it to your "List" and never worry about losing that niche movie later. 
 
 ### Built With
 
@@ -54,24 +54,25 @@ We have created a website that will allow the user to easily search for their fa
 
 ## MVP (Minimum Viable Product):
 
-* Searchable database for different movies and the streaming service they are located on.
+* Searchable database for different movies/tv shows and the streaming service they are located on.
 * Clickable movie titles and display general information.
 
 ## Stretch Goals
 
 * Link to the streaming service if you want to watch it. 
 * Feature which allows you to save movies to your collection. 
+* Enabling a Dark/Light mode feature.
 
 ## Challenges and Solutions: 
 
 <strong> Challenge: </strong> The way the streaming services was nested inside data required a tedious amount of coding in order to extract the correct streaming service where the movie is located. <br/>
-<strong> Solution: </strong> Using arrays and objects etc etc etc.
+<strong> Solution: </strong> Jason worked diligently with a lot of console.logs in order to grab the necessary information out of the API. 
+
+<strong> Challenge: </strong> One of the challenges of having so many divs/CSS classes and enabling Dark mode towards the end is having to go back and add a dark/light mode capability to all of the CSS classes. <br/>
+<strong> Solution: </strong> Deciding early on if you want your website to incorporate Dark/Light mode and being sure you add it to each class you create as you are building up your CSS. 
 
 <strong> Challenge: </strong> Dynamic creation and dynamic classes. Divs within divs within divs.  <br/>
-<strong> Solution: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
-
-<strong> Challenge: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf <br/>
-<strong> Solution: </strong> alksdjflkajsdlfkjaslkdfjakd asdlkfjalksdjf hksdjf habkjasdfasdnf nakdsfhaklsdjf nnd nsj flkjeieonc kslkdjf
+<strong> Solution: </strong> Doing most of the HTML within the JavaScript helped clean up the code overall. 
 
 ## Code Snippets
 
@@ -164,6 +165,8 @@ function showFullMediaContent(result) {
 
 ## Screenshots
 
-<img src="images/finding_streamo.png" alt="Logo" width="384px" height="216">
+<img src="images/homepage" alt="Logo" width="384px" height="216">
+<img src="images/searchTVShow" alt="Logo" width="384px" height="216">
+<img src="images/listExample" alt="Logo" width="384px" height="216">
 
 
