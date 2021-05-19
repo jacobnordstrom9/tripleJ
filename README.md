@@ -165,8 +165,8 @@ function showFullMediaContent(result) {
 
 ## Screenshots
 
-<img src="images/homepage" alt="Logo" width="384px" height="216">
-<img src="images/searchTVShow" alt="Logo" width="384px" height="216">
-<img src="images/listExample" alt="Logo" width="384px" height="216">
+<img src="images/homepage" alt="homepage" width="384px" height="216">
+<img src="images/searchTVShow" alt="tvShows" width="384px" height="216">
+<img src="images/listExample" alt="list" width="384px" height="216">
 
 
