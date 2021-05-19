@@ -166,8 +166,8 @@ function showFullMediaContent(result) {
 ## Screenshots
 
 <img src="images/homepage.png" alt="homepage" width="100%" height="782">
-<img src="images/searchFindingNemo.png" alt="search" width="100%" height="432">
-<img src="images/resultsFindingNemo" alt="searchMovieResults" width="100%" height="782">
+<img src="images/searchingFindingNemo.png" alt="search" width="100%" height="432">
+<img src="images/resultsFindingNemo.png" alt="searchMovieResults" width="100%" height="782">
 <img src="images/Disney+FindingNemo.png" alt="Disney+" width="100%" height="782">
 <img src="images/searchTVShow.png" alt="tvShows" width="100%" height="782px">
 <img src="images/listExample.png" alt="list" width="100%" height="432">
