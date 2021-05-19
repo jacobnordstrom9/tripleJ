@@ -1,3 +1,4 @@
+
 @import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Oswald|Roboto");
 @font-face {
   font-family: "Material Icons";
@@ -102,7 +103,7 @@ main #full-media-content #media-details #from-full-media-collection,
 body {
   font-family: "Julius Sans One", sans-serif;
   color: #484539;
-  background-color: #f9f9f9;
+  /* background-color: #19191a; */
 }
 
 ul {
@@ -164,6 +165,8 @@ header * {
 header #topbar {
   padding: 0 5%;
   box-sizing: border-box;
+  background-color: black;
+  
 }
 
 header #topbar * {
@@ -200,7 +203,7 @@ header #topbar #ref-link {
 }
 header #topbar #ref-link a:hover {
   color: #8c8c8c;
-}
+/* } */
 
 header #topbar #menu-btn {
   float: right;
@@ -226,6 +229,7 @@ header #search #search-input {
   border-top: 1px solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
   outline: none;
+  /* background-color: #19191a; */
 }
 
 header #search .search-clear {
@@ -253,6 +257,7 @@ header #search #search-results {
 
 header nav {
   margin-top: 25px;
+  
 }
 
 header nav div {
@@ -271,6 +276,7 @@ header nav #primary-nav {
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   left: -140px;
   height: calc(100vh - 167px);
+  background-color: #19191a;
 }
 
 header nav #primary-nav li {
@@ -282,7 +288,7 @@ header nav #primary-nav li {
 }
 
 header nav #primary-nav li:hover {
-  color: #484539;
+  color: white;
 }
 
 header nav #primary-nav li:hover {
@@ -299,6 +305,7 @@ header nav #primary-nav li:hover {
 header nav #secondry-nav {
   width: 100%;
   text-align: center;
+  background-color: #19191a;
 }
 
 header nav #secondry-nav li {
@@ -312,7 +319,7 @@ header nav #secondry-nav li {
 }
 
 header nav #secondry-nav li:hover {
-  color: #484539;
+  color: whitesmoke;
 }
 
 @media screen and (max-width: 400px) {
@@ -366,7 +373,7 @@ main #main-content .media-item {
   overflow: hidden;
   font-family: "Oswald", sans-serif;
   font-size: 0.7em;
-  color: #000;
+  color: whitesmoke;
   order: 1;
   cursor: pointer;
 }
@@ -558,7 +565,7 @@ main #full-media-content #media-details #media-details-bar {
   padding-right: 10px;
   text-align: center;
   color: #ddd;
-  background-color: #000;
+  /* background-color: #000; */
 }
 
 @media (min-width: 800px) {

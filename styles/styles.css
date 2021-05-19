@@ -1,5 +1,3 @@
-
-
 body{
     background-color:rgb(50, 233, 215);
     }
@@ -10,15 +8,6 @@ img{
     margin-left: auto;
     position: relative;
     }
-
-nav{
-    background-color:rgb(50, 233, 215);
-}
-
-.secondary-nav{
-    color: #FCBF49;
-
-}
 
 .txt-turq{
     color:rgb(133, 231, 221);

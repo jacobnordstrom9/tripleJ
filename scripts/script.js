@@ -1553,3 +1553,20 @@ function init() {
     nav('movies,popular');
 };
 init();
+
+//DARK MODE IMPLIMENTATION
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+if (prefersDarkScheme.matches) {
+    document.body.classList.add("dark-theme");
+} else {
+    document.body.classList.remove("dark-theme");
+}
+
+const logoEl = document.getElementById('logo');
+const matchDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+const setlogo = isDark =>
+  (logoEl.src = `settings-${isDark ? 'dark' : 'light'}.png`);
+
+setlogo(matchDark.matches);
