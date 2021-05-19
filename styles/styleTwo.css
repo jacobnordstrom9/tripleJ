@@ -226,7 +226,7 @@ header nav #secondry-nav li:active {
   header #topbar {
     padding: 0 5%;
     box-sizing: border-box;
-    background-color: black;
+    background-color: 222430;
     
   }
   header #topbar #menu-btn {
@@ -716,7 +716,7 @@ header nav #secondry-nav li:active {
     /* height: 100%; */
     /* font-family: "Julius Sans One", sans-serif;
     color: #484539;
-  } */ */
+  } */
   
   /* #page {
     background: var(--bg-color);
@@ -725,8 +725,8 @@ header nav #secondry-nav li:active {
     min-height: 100%;
     transition: color .2s, background-color .2s;
   } */
-  
-  /* #content {
+/*   
+  #content {
     margin: auto;
     max-width: 60ch;
     padding: 2ch;
@@ -735,9 +735,3 @@ header nav #secondry-nav li:active {
   a {
     color: var(--theme-color);
   }
-  
-  /* footer {
-    padding: 20px 0;
-    margin: 10px 0;
-    border-top: 1px solid var(--text-color);
-  } */
