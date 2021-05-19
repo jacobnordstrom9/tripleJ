@@ -195,9 +195,6 @@ function fadeOut(id) {
 
 
 
-
-
-
 // SELECTING DIV TO SHOW BY PARENT NODES CHILDREN SELECTOR
 function onMediaHover() {
     const mediaItem = document.querySelectorAll('.media-item');
@@ -206,14 +203,6 @@ function onMediaHover() {
         item.onmouseleave = () => item.children[2].style.display = 'none';
     });
 };
-
-
-
-
-
-
-
-
 
 
     // MAIN NAVIGATION
@@ -487,8 +476,6 @@ function updateList(tmdbId, id) {
 };
 
 
-
-
     // ADD NEW LIST
 
 
@@ -511,8 +498,6 @@ function addNewList(divId, inputId) {
 };
 
 
-
-
     // ADD ITEM TO LIST 
 
 
@@ -527,10 +512,7 @@ function addItemToList(list, tmdbId, id) {
 }
 
 
-
-
     // DELETE A LIST
-
 
 function deleteList(list, id) {
 
@@ -558,13 +540,9 @@ function deleteList(list, id) {
 };
 
 
-
-
     // DELETE LIST ITEM
 
-
 function deleteItemFromList(list, tmdbId, id, remove) {
-
 
     for (let i in state.mylists[list]) {
 
@@ -591,13 +569,7 @@ function deleteItemFromList(list, tmdbId, id, remove) {
     };
 };
 
-
-
-
-
-
     // SHOW MAIN CONTENT RESULTS
-
 
 function showContentResults(results) {
 
@@ -1548,3 +1520,11 @@ function init() {
     nav('movies,popular');
 };
 init();
+
+
+
+const chk = document.getElementById('chk');
+
+chk.addEventListener('change', () => {
+	document.body.classList.toggle('dark');
+});
