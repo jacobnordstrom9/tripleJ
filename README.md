@@ -61,7 +61,6 @@ We have created a website that will allow the user to easily search for their fa
 
 * Link to the streaming service if you want to watch it. 
 * Feature which allows you to save movies to your collection. 
-* Enabling a Dark/Light mode feature.
 
 ## Challenges and Solutions: 
 
@@ -165,11 +164,17 @@ function showFullMediaContent(result) {
 
 ## Screenshots
 
+Homepage
 <img src="images/homepage.png" alt="homepage" width="100%" height="782">
+Search feature
 <img src="images/searchingFindingNemo.png" alt="search" width="100%" height="432">
+Search results
 <img src="images/resultsFindingNemo.png" alt="searchMovieResults" width="100%" height="782">
+Link to streaming service where movie is available
 <img src="images/Disney+FindingNemo.png" alt="Disney+" width="100%" height="782">
+TV show search results
 <img src="images/searchTVShow.png" alt="tvShows" width="100%" height="782px">
+Example of the list feature
 <img src="images/listExample.png" alt="list" width="100%" height="432">
 
 
