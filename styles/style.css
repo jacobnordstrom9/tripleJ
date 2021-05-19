@@ -1,3 +1,5 @@
+/* //style.css */
+
 @import url("https://fonts.googleapis.com/css?family=Julius+Sans+One|Oswald|Roboto");
 @font-face {
   font-family: "Material Icons";
@@ -38,6 +40,7 @@ header nav ul,
 #mylists-add-new-list .list-p {
   margin: 0;
   padding: 0;
+  /* background-color: #222430; */
 }
 
 header *,
@@ -47,14 +50,16 @@ header *,
   font-family: "Oswald", sans-serif;
   font-size: 1em;
   text-transform: uppercase;
-  color: #484539;
+  color: whitesmoke;
+  background-color: #222430;
 }
 
 header #topbar #ref-link {
   font-family: "Oswald", sans-serif;
   font-size: 0.8em;
   text-transform: uppercase;
-  color: #8c8c8c;
+  color: whitesmoke;
+  background-color: #222430;
 }
 
 main #main-content .media-item .rating,
@@ -63,8 +68,8 @@ main #main-pagination .pagination-box {
   font-size: 12px;
   padding: 5px 5px;
   border-radius: 50%;
-  color: #f9f9f9;
-  background-color: #0cac03;
+  color: whitesmoke;
+  background-color: #f77f00;
 }
 
 header #topbar #ref-link a:hover,
@@ -89,7 +94,7 @@ main #full-media-content #media-details #from-full-media-collection p:hover,
 main #full-media-content #media-details #from-full-media-collection,
 #mylists-add-new-list {
   visibility: hidden;
-  background-color: #f9f9f9;
+  background-color: #222430;
   border: 1px solid #bbb;
   border-top: 0;
   border-radius: 5px;
@@ -101,8 +106,8 @@ main #full-media-content #media-details #from-full-media-collection,
 
 body {
   font-family: "Julius Sans One", sans-serif;
-  color: #484539;
-  background-color: #f9f9f9;
+  color: #8c8c8c;
+  background-color: #222430;
 }
 
 ul {
@@ -120,11 +125,11 @@ i {
 }
 
 .active-parent {
-  color: #484539;
+  color: #8c8c8c;
 }
 
 .active-child {
-  color: #000;
+  color: #8c8c8c;
 }
 
 .new-list-icon {
@@ -154,11 +159,11 @@ header {
   left: 0;
   padding-bottom: 20px;
   z-index: 1000;
-  background-color: #f9f9f9;
+  background-color: #222430;
 }
 
 header * {
-  background-color: #f9f9f9;
+  background-color: #222430;
 }
 
 header #topbar {
@@ -199,7 +204,7 @@ header #topbar #ref-link {
   }
 }
 header #topbar #ref-link a:hover {
-  color: #8c8c8c;
+  color: whitesmoke;
 }
 
 header #topbar #menu-btn {
@@ -282,7 +287,7 @@ header nav #primary-nav li {
 }
 
 header nav #primary-nav li:hover {
-  color: #484539;
+  color: whitesmoke;
 }
 
 header nav #primary-nav li:hover {
@@ -312,7 +317,7 @@ header nav #secondry-nav li {
 }
 
 header nav #secondry-nav li:hover {
-  color: #484539;
+  color: whitesmoke;
 }
 
 @media screen and (max-width: 400px) {
@@ -323,7 +328,7 @@ header nav #secondry-nav li:hover {
 }
 
 header nav #secondry-nav li:hover {
-  color: #000;
+  color: #8c8c8c;
 }
 header nav #secondry-nav li:active {
   outline: none;
@@ -343,6 +348,7 @@ main {
   padding: 0 5%;
   font-family: "Oswald", sans-serif;
   padding-bottom: 40px;
+  background-color: #222430;
 }
 
 @media (min-width: 800px) {
@@ -356,6 +362,7 @@ main #main-content {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
+  
 }
 main #main-content .media-item {
   position: relative;
@@ -366,9 +373,10 @@ main #main-content .media-item {
   overflow: hidden;
   font-family: "Oswald", sans-serif;
   font-size: 0.7em;
-  color: #000;
+  color: whitesmoke;
   order: 1;
   cursor: pointer;
+  background-color: #222430;
 }
 
 main #main-content .media-item .media-poster {
@@ -389,7 +397,7 @@ main #main-content .media-item .is-in-collection {
   left: auto;
   float: right;
   right: -8px;
-  color: #484539;
+  color: #8c8c8c;
   cursor: pointer;
 }
 
@@ -411,7 +419,7 @@ main #main-content .media-item .more-information {
   z-index: 1;
   font-size: 0.9em;
   text-transform: uppercase;
-  color: #f9f9f9;
+  color: whitesmoke;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -464,7 +472,7 @@ main #main-pagination .pagination-box {
 }
 
 main #main-pagination .pagination-box:hover {
-  background: #333;
+  background: #222430;
 }
 
 main #full-media-content {
@@ -474,7 +482,7 @@ main #full-media-content {
   left: auto;
   display: none;
   z-index: 3;
-  background-color: #f9f9f9;
+  background-color: #222430;
   height: calc(100vh - 150px);
   overflow-y: auto;
 }
@@ -491,7 +499,7 @@ main #full-media-content .download-icon {
 
 main #full-media-content .close-media-content:hover,
 main #full-media-content .download-icon:hover {
-  color: #333;
+  color: whitesmoke;
 }
 
 main #full-media-content #media-showcase {
@@ -510,14 +518,14 @@ main #full-media-content #media-showcase .download-fanart {
   font-size: 0.8em;
   text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
   transition: 0.4s;
-  color: #f9f9f9;
+  color: whitesmoke;
 }
 main #full-media-content #media-showcase .download-fanart .download-icon {
   color: crimson;
   cursor: pointer;
 }
 main #full-media-content #media-showcase .download-fanart .download-icon:hover {
-  color: #f9f9f9;
+  color: whitesmoke;
 }
 main #full-media-content #media-showcase h1 {
   position: relative;
@@ -526,7 +534,7 @@ main #full-media-content #media-showcase h1 {
   float: right;
   right: 20px;
   clear: both;
-  color: #f9f9f9;
+  color: whitesmoke;
   text-shadow: 1px 1px #111;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -558,7 +566,7 @@ main #full-media-content #media-details #media-details-bar {
   padding-right: 10px;
   text-align: center;
   color: #ddd;
-  background-color: #000;
+  background-color: #222430;
 }
 
 @media (min-width: 800px) {
@@ -608,7 +616,7 @@ main #full-media-content #media-details p {
 
 main #full-media-content #media-details #media-tagline {
   text-transform: uppercase;
-  color: #000;
+  color: whitesmoke;
 }
 
 main #full-media-content #media-details #media-overview {
@@ -621,7 +629,7 @@ main #full-media-content #media-details #from-full-media-collection {
   right: 1%;
   bottom: auto;
   left: auto;
-  color: #484539;
+  color: whitesmoke;
   position: absolute;
   min-width: 260px;
   padding-bottom: 5px;
@@ -711,7 +719,7 @@ main
 #main-mylists hr {
   margin: 0;
   width: 100%;
-  color: #ddd;
+  color: whitesmoke;
 }
 
 #main-mylists .list-heading {
@@ -809,7 +817,7 @@ main
 }
 
 #main-mylists #user-lists .list-item .list-item-title:hover {
-  color: #222;
+  color: whitesmoke;
 }
 
 @media (min-width: 800px) {
